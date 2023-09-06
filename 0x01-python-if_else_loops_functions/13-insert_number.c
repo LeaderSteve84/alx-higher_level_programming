@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
 * insert_node - a function in C that inserts a number
-* into a sorted singly linked list. 
+* into a sorted singly linked list.
 * @head: pointer to the head of the linked list
 * @number: The number to insert
 * Return: the address of the new node, or NULL if it failed
@@ -18,7 +18,7 @@ listint_t *insert_node(listint_t **head, int number)
 		return (NULL);
 	}
 	new_node->n = number;
-	
+
 	if (current == NULL || current->n >= number)
 	{
 		new_node->next = current;
