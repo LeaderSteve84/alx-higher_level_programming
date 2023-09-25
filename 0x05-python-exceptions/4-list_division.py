@@ -10,7 +10,10 @@ def list_division(my_list_1, my_list_2, list_length):
             numerator = my_list_1[i]
             denominator = my_list_2[i]
 
-            if not(isinstance(numerator, (int, float)) and isinstance(denominator, (int, float))):
+            if not (
+                    isinstance(numerator, (int, float)) and 
+                    isinstance(denominator, (int, float))
+            ):
                 raise TypeError("wrong type")
 
             if denominator == 0:
