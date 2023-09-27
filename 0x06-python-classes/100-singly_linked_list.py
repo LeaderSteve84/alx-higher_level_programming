@@ -22,6 +22,11 @@ class Node:
 
     @data.setter
     def data(self, value):
+        """set the value into the data.
+
+        Args:
+            value (int): an integer.
+        """
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
         self.__data = value
@@ -33,6 +38,11 @@ class Node:
 
     @next_node.setter
     def next_node(self, value):
+        """insert the value into the new_node.
+
+        Args:
+            value (int): an integer value.
+        """
         if not isinstance(value, Node) and value is not None:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
