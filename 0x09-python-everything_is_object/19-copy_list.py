@@ -2,9 +2,9 @@
 ''' a function def copy_list(l): that returns a copy of a list.'''
 
 
-def copy_list(my_list):
+def copy_list(a):
     '''function that returns a copy of a list.
     Args:
-        my_list (list): A list as argument
+        a (list): A list as argument
     '''
     return l.copy()
