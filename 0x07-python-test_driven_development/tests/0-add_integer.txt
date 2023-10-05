@@ -1,7 +1,5 @@
-# 0-add_integer.txt
-=================================
-usage guide to 0-add_integer.txt
-=================================
+Usage Guide for add_integer Module
+==================================
 
 Usage of function add_integer(a, b=98)
 
@@ -56,33 +54,33 @@ when second argument is optional
 Non-number
 ==========
 
-add_integer() expects both arguments as integer and float
+add_integer() expects both arguments as integers and floats
 or integer and float. raise a TypeError if either argument is a
 non-integer or non-float.
 
 ::
 
 	>>> add_integer("hi", 3)
-	Traceback(most recent call last):
-	TypeError: a must be an integer
+	Traceback (most recent call last):
+	    TypeError: a must be an integer
 
 ::
 
 	>>> add_integer(3, "hello")
-	Traceback(most recent call last):
-        TypeError: b must be an integer
+	Traceback (most recent call last):
+            TypeError: b must be an integer
 
 ::
 
 	>>> add_integer(None)
-	Traceback(most recent call last):
-        TypeError: a must be an integer
+	Traceback (most recent call last):
+            TypeError: a must be an integer
 
 ::
 
 	>>> add_integer(2.5, None)
-	Traceback(most recent call last):
-        TypeError: b must be an integer
+	Traceback (most recent call last):
+            TypeError: b must be an integer
 
 if both arguments are non-integer and non-floats, print only for
 the first argument a TypeError message.
@@ -90,27 +88,27 @@ the first argument a TypeError message.
 ::
 
 	>>> add_integer("hello", "hi")
-	Traceback(most recent call last):
-        TypeError: a must be an integer
+	Traceback (most recent call last):
+            TypeError: a must be an integer
 
 if infinity is provided, function will fail.
 
 ::
 
 	>>> add_integer(float('inf'))
-	Traceback(most recent call last):
-        OverflowError: cannot convert float infinity to an integer
+	Traceback (most recent call last):
+            OverflowError: cannot convert float infinity to an integer
 
 also, with NaN numbers.
 
 ::
 
 	>>> add_integer(float('nan'))
-	Traceback(most recent call last):
-        ValueError: cannot convert float NaN to integer
+	Traceback (most recent call last):
+            ValueError: cannot convert float NaN to integer
 
 ::
 
 	>>> add_integer(3, float('nan'))
-	Traceback(most recent call last):
-        ValueError: cannot convert float NaN to integer
+	Traceback (most recent call last):
+            ValueError: cannot convert float NaN to integer
