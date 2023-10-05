@@ -12,22 +12,22 @@ class TestMaxInteger(unittest.TestCase):
         ordered = [1, 2, 4, 3]
         self.assertEqual(max_integer(ordered), 4)
 
-    def test_max_At_Beginning(self):
+    def test_max_at_beginning(self):
         '''Test a list with a beginning max value.'''
-        max_At_Beginning = [4, 3, 2, 1]
-        self.assertEqual(max_integer(max_At_Beginning), 4)
+        max_at_beginning = [4, 3, 2, 1]
+        self.assertEqual(max_integer(max_at_beginning), 4)
 
     def test_empty_List(self):
         '''test an empty list.'''
         empty = []
         self.assertEqual(max_integer(empty), None)
 
-    def test_one_Element_List(self):
+    def test_one_element_List(self):
         '''test a list with asingle element'''
         one_element = [7]
         self.assertEqual(max_integer(one_element), 7)
 
-    def test_Floats(self):
+    def test_floats(self):
         '''test a list of floats.'''
         floats = [1.53, 6.33, -9.123, 15.2, 6.0]
         self.assertEqual(max_integer(floats), 15.2)
@@ -42,12 +42,12 @@ class TestMaxInteger(unittest.TestCase):
         string = "bigail"
         self.assertEqual(max_integer(string), 'r')
     
-    def test_list_Of_strings(self):
+    def test_list_of_strings(self):
         '''test a list of strings.'''
         strings = ["bigail", "is", "my", "name"]
         self.assertEqual(max_integer(strings), "name")
 
-    def test_Empty_String(self):
+    def test_empty_string(self):
         '''test an empty string.'''
         self.assertEqual(max_integer(""), None)
 
