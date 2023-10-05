@@ -53,6 +53,6 @@ class Test_MaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(""), None)
 
   
-  if __name__ == "__main__":
-      unittest.main()
+if __name__ == "__main__":
+    unittest.main()
 
