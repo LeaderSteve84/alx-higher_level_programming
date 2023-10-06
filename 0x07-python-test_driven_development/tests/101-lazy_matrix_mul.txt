@@ -139,6 +139,7 @@ They must be list of lists: Not just any list.
 
 	>>> print(lazy_matrix_mul([[1, 2]], [3, 4]))
 	[11]
+
 ::
 
 	>>> print(lazy_matrix_mul([1, 2], [3, 4]))
@@ -151,6 +152,7 @@ The list of list must contain integers of floats
 	>>> print(lazy_matrix_mul([[1,"non-number"]], [[3, 4]]))
         Traceback (most recent call last):
 	    ValueError: shapes (1,2) and (1,2) not aligned: 2 (dim 1) != 1 (dim 0)
+
 ::
 
 	>>> print(lazy_matrix_mul([[1, 6], [7, 8]], [[5, "1"], [7, 8]]))
