@@ -14,7 +14,7 @@ of multiplication of `m_a` by `m_b`.
     >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
     >>> m_a = [
     ... [1, 2],
-    ... [3, 4],
+    ... [3, 4]
     ... ]
     >>> m_b = m_a
     >>> print(matrix_mul(m_a, m_b))
@@ -52,7 +52,7 @@ Both Integer and floats can be combine together.
 
     >>> m_a = [
     ... [1, 2.2, 3.3, 4],
-    ... [5, 6, 7, 8.8],
+    ... [5, 6, 7, 8.8]
     ... ]
     >>> m_b = [
     ... [1.1, 2, 3.3],
@@ -87,12 +87,12 @@ If two matrices cannot be multiplied. raised a ValueError.
 
     >>> m_a = [
     ... [1, 2],
-    ... [3, 4],
+    ... [3, 4]
     ... ]
     >>> m_b = [
     ... [1, 2],
     ... [2, 3],
-    ... [4, 5],
+    ... [4, 5]
     ... ]
     >>> print(matrix_mul(m_a, m_b))
     Traceback (most recent call last):
@@ -105,6 +105,12 @@ If `m_a` and `m_b` is empty. Raise a ValueError.
 	>>> print(matrix_mul([], [[1, 2]]))
 	Traceback (most recent call last):
 	    ValueError: m_a can't be empty
+
+::
+
+	>>> print(matrix_mul([[1, 2]], [[]]))
+        Traceback (most recent call last):
+            ValueError: m_b can't be empty
 
 ::
 
@@ -188,11 +194,11 @@ equivalent. Otherwise, raise TypeError.
 
 	>>> m_a = [
 	... [1, 2],
-	... [3, 4, 5],
+	... [3, 4, 5]
 	... ]
 	>>> m_b = [
 	... [1, 2],
-	... [3, 4],
+	... [3, 4]
 	... ]
 	>>> print(matrix_mul(m_a, m_b))
 	Traceback (most recent call last):
@@ -202,11 +208,11 @@ equivalent. Otherwise, raise TypeError.
 
 	>>> m_a = [
         ... [1, 2],
-        ... [3, 4],
+        ... [3, 4]
         ... ]
         >>> m_b = [
         ... [1, 2],
-        ... [3, 4, 5],
+        ... [3, 4, 5]
         ... ]
         >>> print(matrix_mul(m_a, m_b))
         Traceback (most recent call last):
@@ -216,7 +222,7 @@ equivalent. Otherwise, raise TypeError.
 
 	>>> m_a = [
         ... [1, 2],
-        ... [3, 4, 5],
+        ... [3, 4, 5]
         ... ]
         >>> m_b = m_a
         >>> print(matrix_mul(m_a, m_b))
