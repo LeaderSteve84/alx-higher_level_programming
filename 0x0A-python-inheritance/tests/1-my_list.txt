@@ -80,14 +80,3 @@ case 6: the same number
 [1, 1, 1, 1]
 >>>
 
------------------------------------------------
-
-case 7: parent object
-
->>> my_list = [1, 2, 3]
->>> my_list.print_sorted()
-Traceback (most recent call laste):
-    File "<stdin>", line 1, in <module>
-AttributeError: 'list' object has no attribute
-'print_sorted'
->>>
