@@ -9,7 +9,7 @@ def add_attribute(obj, attri, value):
 
     Args:
         obj (any): The object
-        att (str): The name of attribute
+        attri (str): The name of attribute
         value (any): The value
 
     Raises:
@@ -18,4 +18,4 @@ def add_attribute(obj, attri, value):
 
     if not hasattr(obj, "__dict__"):
         raise TypeError("can't add new attribute")
-    setattr(obj, att, value)
+    setattr(obj, attri, value)
