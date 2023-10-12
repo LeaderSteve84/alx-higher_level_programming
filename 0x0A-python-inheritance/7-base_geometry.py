@@ -12,7 +12,7 @@ class BaseGeometry:
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """Public instance method that validates value.
+        """Validates that the value is an integer greater than 0..
 
         Args:
             name (str): The name of the value.
