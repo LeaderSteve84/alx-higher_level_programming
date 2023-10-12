@@ -54,18 +54,3 @@ case 4: for empty list
 >>> my_list.print_sorted()
 []
 >>>
-
-------------------------------------------------
-
-case 8: negative number
-
->>> MyList = __import__('1-my_list').MyList
->>> my_list = MyList()
->>> my_list = MyList(5)
->>> my_list = MyList(1)
->>> my_list = MyList(-1)
->>> my_list = MyList(51)
->>> my_list = MyList(-5)
->>> my_list.print_sorted()
-[-5, -1, 1, 5, 51]
->>>
