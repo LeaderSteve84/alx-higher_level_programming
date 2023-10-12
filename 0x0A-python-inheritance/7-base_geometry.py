@@ -15,8 +15,8 @@ class BaseGeometry:
         """Public instance method that validates value.
 
         Args:
-            name (string): A string.
-            value (int): an integer value.
+            name (str): The name of the value.
+            value (int): The value to be validated.
 
         Raises:
             TypeError: <name> must be an integer
