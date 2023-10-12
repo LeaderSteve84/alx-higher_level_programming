@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """A module of a class BaseGeometry
 (based on 6-base_geometry.py).
 """
