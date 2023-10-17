@@ -55,18 +55,18 @@ class Square(Rectangle):
                 a += 1
 
         elif kwargs and len(kwargs) != 0:
-            for k, v in kwargs.items():
-                if k == "id":
-                    if v is None:
+            for i, j in kwargs.items():
+                if i == "id":
+                    if j is None:
                         self.__init__(self.size, self.x, self.y)
                     else:
-                        self.id = v
-                elif k == "size":
-                    self.size = v
-                elif k == "x":
-                    self.x = v
+                        self.id = j
+                elif i == "size":
+                    self.size = j
+                elif i == "x":
+                    self.x = j
                 elif k == "y":
-                    self.y = v
+                    self.y = j
 
     def to_dictionary(self):
         """return the dict rep of a square"""
