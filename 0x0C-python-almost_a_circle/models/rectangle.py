@@ -127,20 +127,20 @@ class Rectangle(Base):
                 a += 1
 
         elif kwargs and len(kwargs) != 0:
-            for k, v in kwargs.items():
-                if k == "id":
-                    if v is None:
+            for i, j in kwargs.items():
+                if i == "id":
+                    if j is None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
-                        self.id = v
-                elif k == "width":
-                    self.width = v
-                elif k == "height":
-                    self.height = v
-                elif k == "x":
-                    self.x = v
-                elif k == "y":
-                    self.y = v
+                        self.id = j
+                elif i == "width":
+                    self.width = j
+                elif i == "height":
+                    self.height = j
+                elif i == "x":
+                    self.x = j
+                elif i == "y":
+                    self.y = j
 
     def to_dictionary(self):
         """return the dict rep of a rectangle"""

@@ -65,7 +65,7 @@ class Square(Rectangle):
                     self.size = j
                 elif i == "x":
                     self.x = j
-                elif k == "y":
+                elif i == "y":
                     self.y = j
 
     def to_dictionary(self):
