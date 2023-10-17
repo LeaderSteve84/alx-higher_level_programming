@@ -72,7 +72,7 @@ class Square(Rectangle):
         """return the dict rep of a square"""
         return {
             "id": self.id,
-            "size": self.size,
+            "size": self.width,
             "x": self.x,
             "y": self.y
         }
