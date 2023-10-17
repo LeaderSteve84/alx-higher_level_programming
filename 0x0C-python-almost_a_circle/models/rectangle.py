@@ -109,22 +109,22 @@ class Rectangle(Base):
             **kwargs (dict): key/value pair of attributes.
         """
         if args and len(args) != 0:
-            a = 0
+            n = 0
             for arg in args:
-                if a == 0:
+                if n == 0:
                     if arg is None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
                         self.id = arg
-                elif a == 1:
+                elif n == 1:
                     self.width = arg
-                elif a == 2:
+                elif n == 2:
                     self.height = arg
-                elif a == 3:
+                elif n == 3:
                     self.x = arg
-                elif a == 4:
+                elif n == 4:
                     self.y = arg
-                a += 1
+                n += 1
 
         elif kwargs and len(kwargs) != 0:
             for i, j in kwargs.items():
