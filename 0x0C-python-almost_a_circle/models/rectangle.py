@@ -90,9 +90,9 @@ class Rectangle(Base):
             return
 
         [print("") for y in range(self.y)]
-        for x in range(self.height):
-            [print(" ", end="") for y in range(self.x)]
-            [print("#", end="") for z in range(self.width)]
+        for h in range(self.height):
+            [print(" ", end="") for i in range(self.x)]
+            [print("#", end="") for j in range(self.width)]
             print("")
 
     def update(self, *args, **kwargs):
