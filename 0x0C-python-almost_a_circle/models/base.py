@@ -2,7 +2,7 @@
 
 """A module of a model class bass"""
 
-# import json
+import json
 # import csv
 # import turtle
 
@@ -27,3 +27,13 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """return JSON of a list of dictionary.
+
+        Args:
+            list_dictionaries (list): A list of dictionaries.
+        """
+        if list_dictionaries is None or list_dictionaries == []:
+            return json.dumps(list_dictionaries)
