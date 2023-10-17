@@ -3,7 +3,7 @@
 """A module of a model class bass"""
 
 import json
-# import csv
+import csv
 # import turtle
 
 
@@ -90,4 +90,38 @@ class Base:
                 data = cls.from_json_string(json_data)
                 return [cls.create(**obj) for obj in data]
         except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """A mehod that serializes CSV.
+
+        Args:
+            list_objs (list): A list of inherited base instance.
+        """
+        with open("{}.csv".format(cls.__name__), "w", newline="") as csv_file:
+            if list_objs is None or list_objs == []:
+                csv_file.write("[]")
+            else:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                else:
+                    fieldnames = ["id", "size", "x", "y"]
+                writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+                for obj in list_objs:
+                    writer.writerow(obj.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """a method that deserializes in CSV"""
+        try:
+            with open("{}.csv".format(cls.__name__), "r", newline="") as csv_file:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                else:
+                    fieldnames = ["id", "size", "x", "y"]
+                list_dicts = csv.DictReader(csv_file, fieldnames=fieldnames)
+                list_dicts = [dict([k, int(v)] for k, v in d.items()) for d in list_dicts]
+                return [cls.create(**d) for d in list_dicts]
+        except IOError:
             return []
