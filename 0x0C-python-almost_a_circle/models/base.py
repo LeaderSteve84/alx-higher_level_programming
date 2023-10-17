@@ -4,7 +4,7 @@
 
 import json
 import csv
-# import turtle
+import turtle
 
 
 class Base:
@@ -115,13 +115,48 @@ class Base:
     def load_from_file_csv(cls):
         """a method that deserializes in CSV"""
         try:
-            with open("{}.csv".format(cls.__name__), "r", newline="") as csv_file:
+            with open("{}.csv".format(cls.__name__), "r",
+                    newline="") as csv_file:
                 if cls.__name__ == "Rectangle":
                     fieldnames = ["id", "width", "height", "x", "y"]
                 else:
                     fieldnames = ["id", "size", "x", "y"]
                 list_dicts = csv.DictReader(csv_file, fieldnames=fieldnames)
-                list_dicts = [dict([k, int(v)] for k, v in d.items()) for d in list_dicts]
+                list_dicts = [dict([k, int(v)] for k, v
+                    in d.items()) for d in list_dicts]
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """A module that draws rectangle and square.
+
+        Args:
+            list_rectangles (list): A list of rectangle
+            list_squares (list): A list of square
+        """
+        turt = turtle.Turtle()
+        turt.screen.bgcolor("#b7312c")
+        turt.pensize(3)
+        turt.shape("turtle")
+
+        turt.color("#ffffff")
+        for rec in list_rectangles:
+            turt.showturtle()
+            turt.up()
+            turt.goto(rec.x, rec.y)
+            turt.down()
+            for i in range(2):
+                turt.showturtle()
+                turt.up()
+                turt.goto(sq.x, sq.y)
+                turt.down()
+                for i in range(2):
+                    turt.forward(sq.width)
+                    turt.left(90)
+                    turt.forward(sq.height)
+                    turt.left(90)
+                turt.hideturtle()
+
+            turtle.exitonclick()
