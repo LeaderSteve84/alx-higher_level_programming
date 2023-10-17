@@ -51,4 +51,6 @@ class Base:
             if list_objs is None:
                 json_file.write("[]")
             else:
+                list_dicts = [f.to_dictionary() for f in list_objs]
+                json_file.write(Base.to_json_string(list_dicts))
 
