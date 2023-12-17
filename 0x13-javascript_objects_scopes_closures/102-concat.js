@@ -31,7 +31,7 @@ fs.readFile(fileAPath, 'utf8', (err, dataA) => {
         console.error(err);
         process.exit(1);
       }
-      console.log(`Files ${fileAPath} and ${fileBPath} have been concatenated to ${fileCPath}`);
+      // console.log(`Files ${fileAPath} and ${fileBPath} have been concatenated to ${fileCPath}`);
     });
   });
 });
