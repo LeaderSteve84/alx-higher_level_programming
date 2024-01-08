@@ -1,5 +1,5 @@
 # 0x10. Python - Network #0
-## Bash ## Python ## Scripting ##Back-end ## API
+##Bash ##Python ##Scripting ##Back-end ##API
 
 Tasks
 0. cURL body size
