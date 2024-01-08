@@ -1,1 +1,2 @@
-0(nlog(n))
+#!/bin/bash
+0(log(n))
