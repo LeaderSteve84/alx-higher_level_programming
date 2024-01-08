@@ -1,2 +1,2 @@
 #!/bin/bash
-O(nlog(n))
+O(log(n))
