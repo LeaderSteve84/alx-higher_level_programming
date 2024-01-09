@@ -16,9 +16,9 @@ if __name__ == "__main__":
 
     if res_type == 'application/json':
         result = res.json()
-        _d_id = result.get('id')
+        d_id = result.get('id')
         name = result.get('name')
-        if (result != {} and d_id and name):
+        if d_id is not None and name:
             print("[{}] {}".format(d_id, name))
         else:
             print('No result')
