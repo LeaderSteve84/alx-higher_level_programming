@@ -5,8 +5,10 @@ displays the body of the response.
 """
 
 if __name__ == "__main__":
-    from requests import get
     from sys import argv
+    from requests import post
 
-    res = get(argv[1])
-    print(res.headers.get('X-Request-Id'))
+    url = argv[1]
+    email = argv[2]
+    response = post(url, {'email': email})
+    print(response.text)
