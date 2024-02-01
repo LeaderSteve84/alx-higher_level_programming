@@ -42,11 +42,11 @@ Install Node 14
 $ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 $ sudo apt-get install -y nodejs
 Install semi-standard
-Documentation
+<li><a href="https://github.com/standard/semistandard">Documentation</a></li>
 
 $ sudo npm install semistandard --global
 Install request module and use it
-Documentation
+<li><a href="https://github.com/request/request">Documentation</a></li>
 
 $ sudo npm install request --global
 $ export NODE_PATH=/usr/lib/node_modules
@@ -120,7 +120,7 @@ mandatory
 Write a script that prints the title of a Star Wars movie where the episode number matches a given integer.
 
 The first argument is the movie ID
-You must use the Star wars API with the endpoint https://swapi-api.alx-tools.com/api/films/:id
+You must use the <a href="https://swapi-api.alx-tools.com/">Star wars API</a> with the endpoint https://swapi-api.alx-tools.com/api/films/:id
 You must use the module request
 guillaume@ubuntu:~/0x14$ ./3-starwars_title.js 1
 A New Hope
@@ -137,7 +137,7 @@ File: 3-starwars_title.js
 mandatory
 Write a script that prints the number of movies where the character “Wedge Antilles” is present.
 
-The first argument is the API URL of the Star wars API: https://swapi-api.alx-tools.com/api/films/
+The first argument is the API URL of the <a href="https://swapi-api.alx-tools.com/">Star wars API</a>: https://swapi-api.alx-tools.com/api/films/
 Wedge Antilles is character ID 18 - your script must use this ID for filtering the result of the API
 You must use the module request
 guillaume@ubuntu:~/0x14$ ./4-starwars_count.js https://swapi-api.alx-tools.com/api/films
@@ -205,7 +205,7 @@ Write a script that prints all characters of a Star Wars movie:
 
 The first argument is the Movie ID - example: 3 = “Return of the Jedi”
 Display one character name by line
-You must use the Star wars API
+You must use the <a href="https://swapi-api.alx-tools.com/">Star wars API</a>
 You must use the module request
 guillaume@ubuntu:~/0x14$ ./100-starwars_characters.js 3
 Darth Vader
